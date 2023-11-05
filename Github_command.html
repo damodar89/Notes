@@ -1,0 +1,166 @@
+
+
+part-1 
+
+1. git config --global --global user.name "Studen apna"
+2. git config --global user.email "dt.sunildamodar@gmail.com"
+3. git config –list
+
+part-2 
+
+git clone <-some link>
+git status
+
+part-3 
+github repo --> clone ----> changes -----> add ----> commit ----> push
+
+1. git add .
+2. git commit-m “some massage”
+3. git push origin main
+
+part-3 
+Notes:- new folder or directray banana or use git se link karana (mkdir hooks), tab ham git init likhate hai
+
+git init
+git remote add origin <- link>
+git remote -v (to verify remote)
+git branch (to rename branch)
+git branch -M main (to rename branch)
+git push origin main or git push -u origin main // u= origin ko short kar diya haya hai
+
+part-4
+    //Branch Commands//
+
+    git branch // to check branch
+    git branch -M main // to rename branch
+    git checkout <-new branch name> //to navigate
+    git checkout -b <-new branch name -> // to create new branch
+    git branch d <-branch name> // to delete branch
+
+
+####################################################################
+
+repository=folder
+commit = changes
+
+yadid kuchh bhi change kiya hai use pahale add karage fire use commit karage
+
+add = kuchh change huaa hai
+commit= change ko pakka kar diya hai
+
+git configar in system
+
+1. git config --global --global user.name "Studen apna"
+2. git config --global user.email "dt.sunildamodar@gmail.com"
+3. git config –list
+
+
+##########################
+
+clone & status
+
+clone – cloning a repository on our local machine (note- github web se anpane local pc me code ko copy karna) github web
+se link copy kar lage or some link par past kar dege
+
+>>>>> git clone <-some link>
+
+    status – displays the state of the code
+
+    >>>> git status //// project ka status dekhane ka kam karata hai
+
+    cd = change directry
+    ls = list file
+    ls -a = hidden file dekhane ke liye use hotoi hai
+
+
+    ####################################
+    untracked ---> // new files that git doesn’t yet track
+
+    modified --> changed
+
+    staged --> file is ready to be commited
+
+    unmodified --> unchanged
+
+    ####################################
+
+    work flow:-
+
+    github repo --> clone ----> changes -----> add ----> commit ----> push
+
+    add (stage)--> adds new or changed files in your working directory to the git staging area
+
+    git add <-file name> /// one file add but
+        git add . // all file select kar lega ya add kar lega
+
+
+
+        commit ---> it is the record of change
+
+        git commit-m “some massage” // git commit -m (git me main folder me add kar do m ka matlab massage hai )
+
+
+        push command // upload local repo content ot remote repo (finely github par dal do)
+
+        >>>> git push origin main
+
+        1. git add .
+        2.git commit-m “some massage”
+        3.git push origin main
+
+
+        >>>>>>>>mkdir LocalRe /// mkdir (make new directray)
+
+
+        >>>git init // jab bhi kisi folder ko git repojetry banaha hai tab use folder me jagar is common ko likhate hai
+
+        >>>git remote add origin
+        <link> // main folder (repo) hai usame ek new sub folder banate hai to use link karana hoga
+
+        ex-
+        git remote add origin https://github.com/damodar89/localrepo.git
+
+
+        ###############################################
+
+        git init
+        git remote add origin <- link>
+            git remote -v (to verify remote)
+            git branch (to rename branch)
+            git branch -M main (to rename branch)
+            git push origin main or git push -u origin main // u= origin ko short kar diya haya hai
+
+
+
+
+            ####### Branch Commands ##########
+
+            git brach // to check branch
+            git branch -M main // to rename branch
+            git chechout <-new branch name> //to navigate
+                git checkout -b <-new branch name -> // to create new branch
+                    git branch d <-branch name> // to delete brach
+
+
+                        ######### Merging Code #################
+
+                        way-1
+                        git diff <-branch> // to compare commits, branches, files & more
+                            git merge <-branch name> // to merge 2 branches
+
+                                way-2
+                                Create a PR
+
+
+                                ######## Pull Command #########
+
+                                >>>>>>git pull origin main
+
+                                // use to fetch and download contant from a remote repo and immediately updata the local
+                                repo
+
+
+                                ############# Resolving Merge Confilicts ##################
+
+                                An event theat takes place when Git is unable ot automatically resolve differences in
+                                code between two commits
