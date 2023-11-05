@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+</head>
+
+<body>
+    <script>
+        // ############### curring #################
+
+        //non curring
+        function add(a, b, c) {
+            return a + b + c
+        }
+
+        console.log(add(1, 2, 3));
+
+        //curring
+
+        function curryAdd(a) {
+            return function (b) {
+                return function (c) {
+                    return a + b + c
+                }
+            }
+        }
+
+        //short methods
+
+        const curryAdd2 = (a) => (b) => (c) => a + b + c
+
+        console.log(curryAdd(1)(2)(3));
+        console.log(curryAdd2(2)(2)(3));
+
+        /// ex-2
+
+        function DressPrice(price) {
+            return function (discountper) {
+                return price - (price * discountper / 100)
+            }
+        }
+        const calcAmount = DressPrice(100)
+        console.log(calcAmount(20));
+
+
+        // ############### closure #################
+        //ex-1
+
+        // function incremen() {
+        //     let count = 0
+
+        //     count = count + 1
+        //     return count
+
+        // }
+        // console.log(incremen()); //1
+        // console.log(incremen());//1
+        // console.log(incremen());//1 
+
+        //ex-2 //note closer good tarika nahi hai 
+        // let count = 0
+
+        // function incremen() {
+
+        //     count = count + 1
+        //     return count
+
+        // }
+        // console.log(incremen()); //1
+        // console.log(incremen());//1
+        // console.log(incremen());//1 
+
+// ex-3 
+
+
+        function incremen (){
+            let count = 0
+            return function (){
+                count = count+1
+                return count
+            }
+        }
+const myInc = incremen()
+
+        console.log(myInc());
+        console.log(myInc());
+        console.log(myInc());
+        console.log(myInc());
+
+    </script>
+</body>
+
+</html>
