@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+</head>
+<body>
+  <script>
+
+    // function add(a,b){
+    //   console.log("hello",a+b);
+    // }
+
+    // function add (d,c){
+    //   return(
+    //     console.log("value",d)
+    //   )
+    // }
+
+    // add(1,2)
+    // add("locy",4)
+
+    // const addtionArrory= ()=>console.log("arroy");
+
+    // console.log(addtionArrory())
+
+    // const add2 = add3()=>{
+    //   return console.log("arrryo 222")
+    // }
+
+
+// const arrayData= [{name:"locy",age:25}]
+
+// const dataa= arrayData.map((i)=>({...i}))
+// console.log(dataa);
+
+
+
+
+
+// const arrayData = [
+//   { name: "locy", age: 25 },
+//   { name: "john", age: 30 },
+//   { name: "amy", age: 22 }
+// ];
+
+// const transformedData = arrayData.map((item) => ({
+//   ...item,
+//   transformedAge: item.age * 2
+// }));
+
+// console.log(transformedData);
+
+// const array= [1,2,{name:'locy',[function add(){console.log("fun a");}]}]
+
+
+
+
+const array = [1, 2, { name: 'locy', add: () => { console.log("fun a"); } }];
+
+// Use map to find and execute the add function
+const result = array.map((item) => {
+  if (typeof item === 'object' && item.hasOwnProperty('add') && typeof item.add === 'function') {
+    item.add();
+  }
+  return item;
+});
+
+console.log(result);
+
+
+  </script>
+</body>
+</html>
